@@ -13,8 +13,8 @@ In January 2024 my work partner Jaylyn Henegar and I created a Bible memorizatio
 
 The parts that I worked on were the CSS, the majority of the HTML, the documentation on the design of the application, and the linking of all the pieces of the documentation, as it is in three parts. The main part of the documentation is in a README file, which links to the design docs and technical docs. The design docs mainly document the application layout and the CSS and HTML, while the technical docs document the JavaScript. 
 
-- [Application README](https://itramell.github.io/BibleMemorizationApp/README.md)
-- [Design Doc](https://itramell.github.io/BibleMemorizationApp/TechnicalDocuments/DesignDoc.md)
+- [Application README](https://github.com/itramell/itramell.github.io/blob/e276f5a8eb8bb5699380099a7185c1bf251b0963/BibleMemorizationApp/README.md)
+- [Design Doc](https://github.com/itramell/itramell.github.io/blob/e276f5a8eb8bb5699380099a7185c1bf251b0963/BibleMemorizationApp/TechnicalDocuments/DesignDoc.md)
 - [Playable Application](https://itramell.github.io/BibleMemorizationApp/HTML/Homepage.html)
 - [Application Code Part of Repository](https://github.com/itramell/itramell.github.io/tree/1430b00d24656fb159bf1a5d3f6beabd73f4ca03/BibleMemorizationApp)
 
@@ -24,8 +24,8 @@ In the fall semester of 2023, for my Infomration Systems Analysis class, SYS 390
 
 For the SRS and BP documents, I had the task of creating all the use cases, data flow diagrams and process specifications. I used Google Docs to create the use cases and I used draw.io to create the data flow diagrams and process specifications. The rest of the documentation was split up between the rest of the group.
 
-- [Use Cases](https://itramell.github.io/SystemsAnalysisWork/Use%20Cases.pdf)
-- [Data Flow Diagrams and Process Specifications](https://itramell.github.io/SystemsAnalysisWork/DataFlowDiagrams.pdf)
+- [Use Cases](https://github.com/itramell/itramell.github.io/blob/e276f5a8eb8bb5699380099a7185c1bf251b0963/SystemsAnalysisWork/Use%20Cases.pdf)
+- [Data Flow Diagrams and Process Specifications](https://github.com/itramell/itramell.github.io/blob/e276f5a8eb8bb5699380099a7185c1bf251b0963/SystemsAnalysisWork/DataFlowDiagrams.pdf)
 - [Systems Analysis Part of Repository](https://github.com/itramell/itramell.github.io/tree/fc6586a61b12ee702e366b353dea26454cbf0bfb/SystemsAnalysisWork)
 
 Note: The SRS and BP are Word Documents, which will need to be downloaded to be viewed. They can be found in the SystemsAnalysisWork folder in the repository, which is the last link in the list above.
@@ -35,7 +35,7 @@ Note: The SRS and BP are Word Documents, which will need to be downloaded to be 
 For my Algorithm Analysis class, COS 320, I have been working on solving problems on Kattis as part of my assignments. I have solved the problems either all by myself or with help from my professor, but all of the code has been written solely by myself. I am only including here problems that I have fully solved. The problems marked with a * at the end are problems I did not get help from my professor with. 
 
 - Find Poly
-  - [Solution](https://itramell.github.io/KattisCodeSolutions/findpoly/findpoly.py)
+  - [Solution](https://github.com/itramell/itramell.github.io/blob/e276f5a8eb8bb5699380099a7185c1bf251b0963/KattisCodeSolutions/findpoly/findpoly.py)
   - [Problem Statement](https://open.kattis.com/problems/findpoly)
 - Half A Cookie
   - [Solution](https://github.com/itramell/itramell.github.io/blob/fc6586a61b12ee702e366b353dea26454cbf0bfb/KattisCodeSolutions/halfACookie/halfACookie.py)
