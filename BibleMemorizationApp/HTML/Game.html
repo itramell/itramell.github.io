@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<head>
+    <title>Solid Foundation</title>
+    <link rel="stylesheet" href="../CSS/Game.css">
+    <script src="../JS/Main.js"></script>
+    <script src="../JS/Setup.js"></script>
+    <script src="../JS/Gameplay.js"></script>
+    <script src="../JS/DragNDrop.js"></script>
+    <script src="../JS/Modes.js"></script>
+    <!--This is the script for the confetti. This is the link-->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head> 
+<body onload="setInitialSettings()" id="gameplayPage">
+    <div id="endGameOverlay"></div>
+    <div id="revealAnswerOverlay" onclick="hideAnswer()"></div>
+    <div id="countdownOverlay"></div>
+
+    <div class="container">
+        <div class="optionsButtonContainer">
+            <a href="./Options.html">
+                <button type="button">Back To Options</button>
+            </a>
+        </div>
+
+        <div class="statisticsContainer">
+            <div class="scoreTrackerContainer">
+                <div class="scoreLabel" id="scoreLabel">Score:</div>
+                <div class="scoreTracker" id="scoreTracker">
+                    <!--Score tracker appears here-->
+                </div>
+            </div>
+            <div class="timerContainer" id="timerContainer">
+                <img src="../Images/alarm-clock-4522016_640.png" class="clockIcon">
+                <div class="timer" id="timer">
+                    00:00:00
+                </div>
+            </div>         
+        </div>
+        
+        <!--Word bank area, with the two scroll arrow indicators-->
+        <div id="leftArrow" class="scrollArrow"></div>
+        <div id="rightArrow" class="scrollArrow"></div>
+        <div class="wordBank" id="wordBank">
+            <!--Word/phrase bubbles appear here-->
+        </div>
+        
+        <div class="playArea" id="playArea">
+            <!--This is where the snap-box for creating the stack goes for dropboxes-->
+            <div class="dropbox firstTry" id="0">
+                <!--First dropbox, already there-->
+            </div>
+            <!--Dropboxes appear here-->
+        </div>
+
+        <div class="revealAnswerButtonContainer">
+            <button type="button" id="revealAnswerButton" onclick="showAnswer()">Reveal Answer</button>
+        </div>
+        
+        <div class="revealAnswerWindow" id="revealAnswerWindow" onclick="hideAnswer()">
+            <button type="button" class="closeButton">Close</button>
+            <h2 id="verseRef">
+                <!--Verse reference appears here-->
+            </h2>
+            <div class="verseText" id="verseText">
+                <!--Verse text appears here-->
+            </div>
+        </div>
+
+        <div class="countdownWindow" id="countdownWindow">
+            <label>Countdown:</label>
+            <select name="time" id="timeSelect">
+                <option value="30">30s</option>
+                <option value="45">45s</option>
+                <option value="60">60s</option>
+                <option value="90">90s</option>
+            </select>
+            <button type="button" onclick="startCountdownMode()">Go!</button>
+        </div>
+
+        <div class="endGameWindow" id="endGameWindow">
+            <div class="menuButtons">
+                <a href="./Options.html">
+                    <button type="button">Back To Options</button>
+                </a>
+                <div class="difficultySelectContainer">
+                    <label>Difficulty:</label>
+                    <select name="difficulty" id="difficultySelect" onchange="setDifficulty(this.value)">
+                        <option value="1">Level 1</option>
+                        <option value="2" selected>Level 2</option>
+                        <option value="3">Level 3</option>
+                    </select>
+                </div>  
+            </div>
+            <h2 id="gameEndMessage">
+                <!--Message appears here-->
+            </h2>
+            <h3 class="endVerseRef" id="endVerseRef">
+                <!--Reference to the verse being memorized appears here-->
+            </h3>
+            <div class="endVerseText" id="endVerseText">
+                <!--Verse being memorized appears here-->
+            </div>
+            <div class="endScoreContainer">
+                <h3 id="endScoreLabel">Score:</h3>
+                <div class="endingScore" id="endingScore">
+                    <!--End score appears here-->
+                </div>
+                <div id="endingTimeContainer">
+                    <h3 id="timeLabel">Time:</h3>
+                    <div class="endingTime" id="endingTime">
+                        <!--Final time appears here-->
+                    </div>
+                </div>
+            </div>                  
+            <a href="./Game.html">
+                <button type="button" class="playAgainButton">Play Again</button>
+            </a>   
+        </div>
+    </div>
+
+    <img class="background" src="../Images/playAreaBackground55Opacity.png"/>
+    
+    <!--Function that starts the scripts to run the game-->
+    <script>scripts()</script>
+</body>

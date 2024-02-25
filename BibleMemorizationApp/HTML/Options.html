@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<head>
+    <title>Solid Foundation</title>
+    <link rel="stylesheet" href="../CSS/Options.css">
+    <script src="../JS/Main.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body onload="setInitialSettings()">
+    <div class="container">        
+        <div class="homeButtonContainer">
+            <a href="./Homepage.html">
+                <button type="button" class="homeButton">Back To Home</button>
+            </a>
+        </div>
+        <br>
+
+        <div class="modeSelectContainer">
+            <label>Modes:</label>
+            <select name="mode" id="modeSelect" onchange="setMode(this.value)">
+                <option value="0">Default</option>
+                <option value="1">Time Track</option>
+                <option value="2">Countdown</option>
+                <option value="3">Reversed</option>
+                <option value="4">Extra Words</option>
+                <option value="5">Sudden Death</option>
+            </select>
+        </div>
+
+        <div class="modeDescriptionContainer">
+            <p id="defaultDescription" class="currentMode">
+                The standard game play. Build your tower from the beginning of the verse to the end.
+            </p>
+            <p id="timeTrackDescription">
+                For those who want to see how long it takes them to complete the game, this mode adds a timer. Have fun!
+            </p>
+            <p id="countdownDescription">
+                If you like time trials, you'll enjoy this mode that includes a time limit to complete the game. If time runs out, the game will end!
+            </p>
+            <p id="reversedDescription">
+                Like singing the alphabet backwards? This mode has you stack words in reverse order, last word to first word, bottom to top. 
+                Think backwards songbirds!
+            </p>
+            <p id="extraWordsDescription">
+                Test your memory! This mode adds extra words that are not part of the memory verse to the word bank. Good luck!
+            </p>
+            <p id="suddenDeathDescription">
+                This is for those who wants the most challenging of challenges! There is no reveal answer button, and if you get a word wrong you start over
+                from the beginning. Good luck challenger!
+            </p>
+        </div>
+
+        <div class="difficultySelectContainer" id="difficultySelectContainer">
+            <label>Difficulty:</label>
+            <select name="difficulty" id="difficultySelect" onchange="setDifficulty(this.value)">
+                <option value="1">Level 1</option>
+                <option value="2" selected>Level 2</option>
+                <option value="3">Level 3</option>
+            </select>
+        </div>
+
+        <div class="difficultyDescriptionContainer">
+            <p id="difficultyLevel1">
+                The easiest difficulty, consisting of long phrases.
+            </p>
+            <p id="difficultyLevel2" class="currentDifficulty">
+                The medium difficulty, set as default. It consists of short to medium length phrases.
+            </p>
+            <p id="difficultyLevel3">
+                The hardest difficulty, consisiting of individual words. 
+            </p>
+            <p id="extraWordsModeDifficulty">
+                For extra words mode, the difficulty is always set to 3.
+            </p>
+        </div>
+
+        <div class="startGameContainer">
+            <a href="./Game.html">
+                <button type="button" class="startGameButton">Start Game</button>
+            </a>
+        </div>
+    </div> 
+    
+    <picture class="background">
+        <source class="background" srcset="../Images/beach-5126180_640.png" media="(max-width: 640px)"/>
+        <source class="background" srcset="../Images/beach-5126180_1280.png" media="(max-width: 1280px)"/>
+        <img class="background" src="../Images/beach-5126180_1920.png"/>
+    </picture>  
+</body>

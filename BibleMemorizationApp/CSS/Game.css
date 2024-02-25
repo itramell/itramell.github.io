@@ -1,0 +1,370 @@
+/* Stylehseet for Games.html, the game page */
+
+:root {
+    /* Defining font sizes for responsive design */
+    /* Where I got the clamp() values: 
+            https://utopia.fyi/type/calculator?c=240,16,1.2,1920,22,1.2,10,0,360&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+    --button-font-size: clamp(1rem, 0.9464rem + 0.3571vw, 1.375rem);
+    --main-font-size: clamp(1.2rem, 1.1357rem + 0.4286vw, 1.65rem);
+}
+
+/* PAGE SIZING AND MAIN FONT STYLING  */
+html {
+    height: 100%;
+    font: var(--main-font-size) "Arial", sans-serif;
+}
+
+body {
+    height: calc(100% - 1em);
+    width: calc(100% - 1em);
+}
+
+/* GRID SETUP AND STYLING: For page layout */
+.container {
+    display: grid;
+    position: relative;
+    grid-template-areas:
+        "options  options  stats"
+        "wordBank wordBank wordBank" 
+        "playArea playArea playArea"
+        "answer   answer   answer";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 5fr 8fr 32fr 5fr;  
+    gap: 0.5em;
+    justify-self: center;
+    align-self: center;
+    height: 100%;
+    width: 100%;
+}
+
+/* GRID BACK TO OPTIONS BUTTON AREA: Container holding the back to options button */ 
+.optionsButtonContainer {
+    grid-area: options;
+}
+
+/* GRID STATISTICS AREA: Container holding game statistics, like score and time */
+.statisticsContainer {
+    grid-area: stats;
+    display: flex;
+    flex-direction: column;
+    font: bold var(--main-font-size) "Arial", sans-serif; /* Sets the font for everything in the container */
+}
+
+/* GRID WORD BANK AREA: Container holding the word bank */
+.wordBank {
+    grid-area: wordBank;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-width: 0.15em;  
+    border-bottom-style: solid;
+    border-bottom-color: black;   
+    border-top-style: solid;
+    border-top-color: black; 
+    overflow-y: hidden;
+    overflow-x: auto;
+    background: linear-gradient(170deg, #58dadaff, #9ed5e0ff 25%, #efdabcff 55%, #dac7acff);
+}
+
+/* GRID WORD BANK AREA: Container holding the scroll arrow indicators */
+.scrollArrow {
+    grid-area: wordBank;
+    position: absolute;
+    align-self: center;
+    height: 50%;
+    width: 5%;
+    margin: 0.25em;
+    filter: opacity(40%) brightness(200%) drop-shadow(0 0 0.75em darkblue) saturate(220%);
+        /* The filter property and its values styles the arrows */
+}
+
+/* GRID DROPBOX AREA: Container holding all the dropboxes */
+.playArea {
+    grid-area: playArea;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    height: 100%;
+    overflow-y: auto;
+}
+
+/* GRID REVEAL ANSWER BUTTON AREA: Container holding the reveal answer button */
+.revealAnswerButtonContainer {
+    grid-area: answer;
+    justify-self: left;
+    align-self: end;
+}
+
+/* STYLING FOR ELEMENTS INSIDE STATISTICS CONTAINER */
+.scoreTrackerContainer { /* Container for score tracking */
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    block-size: fit-content;
+}
+
+.scoreLabel { /* Label for the score */
+    display: inline-block;
+    margin-right: 0.35em; /* Simulate normal character space */
+}
+
+.scoreTracker { /* Score number */
+    display: inline-block;
+}
+
+.timerContainer { /* Container for the timer, shows in countdown or time track modes */
+    display: none; /* Starts the container as none (invisible) and is changed to flex (visible) and back to none through JS */
+    justify-content: flex-end;
+    align-items: flex-start;
+    margin-top: 0.1em;
+}
+
+.clockIcon {
+    display: inline-block;
+    max-height: 100%;
+    max-width: clamp(1.2rem, 1.1357rem + 0.4286vw, 1.65rem); /* Sizes the clock icon with the font */
+    margin-right: 0.35em; /* Simulate normal character space */
+}
+
+.timer {
+    display: inline-block;
+}
+
+/* WORD BUBBLE STYLING: Bubbles located in the word bank */
+.bubble {
+    float: left;   
+    margin: 0.15em;
+    padding: 0.1em 1em;
+    border-width: 0.075em;
+    border-radius: 2em;
+    border-style: solid;
+    border-color: rgb(75, 75, 75);    
+    block-size: fit-content;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+.beingDraggedWithTouch {
+    position:absolute;
+    /* Allows for the bubble to be dragged properly when using touchscreen */
+}
+
+/* SCROLL ARROW INDICATOR IMAGE AND POSITIONING: Arrows located in the word bank */
+#leftArrow { /* Shows when there are bubbles overflowed to the left in the word bank */
+    display: none; /* Starts the arrow as none (invisible) and is changed to flex (visible) and back to none through JS */
+    left: 0;
+    background-image: url("../Images/leftArrow.png");
+    background-position: left;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#rightArrow { /* Shows when there are bubbles overflowed to the right in the word bank */
+    display: none; /* Starts the arrow as none (invisible) and is changed to flex (visible) and back to none through JS */
+    right: 0;
+    background-image: url("../Images/rightArrow.png");   
+    background-position: right;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/* DROPBOX STYLING: Dropboxes located in the dropbox container */
+.dropbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    height: 20%;
+    width: 80%;
+    margin-top: 0.05em;  
+    border: 0.1em dashed black;  
+    font-weight: bold;     
+}
+
+.correct { /* Styling changes when the correct bubble is added to the dropbox */
+    padding: 0.5em;
+    block-size: fit-content;
+    color: rgb(255, 255, 255);
+    text-shadow: 0em 0em 1em rgba(0, 160, 0, 1);
+    background-image: url("../Images/rock-575594_640.png");
+    background-size: contain;
+    background-repeat: repeat;
+}
+
+.incorrect { /* Styling changes when the incorrect bubble is added to the dropbox */
+    padding: 0.3em;
+    min-height: 20%; /* Ensures that the dropbox won't shrink to fit the content, text from bubble, size */
+    color: rgb(255, 255, 255);
+    text-shadow: 0em 0em 1em rgb(255, 0, 0, 1);
+    background-image: url("../Images/sandBackground.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;   
+}
+
+/* REVEAL ANSWER WINDOW STYLING: Shows on press of the reveal answer button */
+.revealAnswerWindow {
+    display: none; /* Starts the window as none (invisible) and is changed to flex (visible) and back to none through JS */
+    position: absolute;
+    flex-direction: column;
+    justify-self: center;
+    align-self: center;
+    text-align: center; 
+    block-size: fit-content;
+    max-width: 80%;
+    max-height: 80%;
+    padding: 1em;   
+    border-radius: 2em;
+    border-style: solid;
+    border-color: black;   
+    background-color: rgb(197, 248, 245);
+    cursor: pointer;
+    z-index: 2;
+}
+
+.closeButton {
+    justify-self: end;
+    align-self: flex-end;
+    block-size: fit-content;  
+}
+
+.verseText {
+    overflow-y: auto;
+}
+
+/* COUNTDOWN SELECT WINDOW STYLING: Shows at the start of Countdown mode */
+.countdownWindow {
+    display: none; /* Starts the window as none (invisible) and is changed to flex (visible) and back to none through JS */
+    position: absolute;
+    flex-direction: column;
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+    block-size: fit-content;
+    max-width: 80%;
+    max-height: 80%;
+    padding: 1em;   
+    border-radius: 2em;
+    border-style: solid;
+    border-color: black;   
+    font-weight: bold; 
+    background-color: rgb(197, 248, 245);
+    z-index: 2;
+}
+
+/* END GAME WINDOW STYLING: Shows at the end of a game*/
+.endGameWindow {
+    display: none; /* Starts the window as none (invisible) and is changed to flex (visible) and back to none through JS */
+    position: absolute;
+    flex-direction: column;
+    justify-self: center;
+    align-self: center;     
+    text-align: center;
+    block-size: fit-content;
+    max-width: 80%;
+    max-height: 80%;
+    padding: 1em;
+    border-radius: 2em;
+    border-style: solid;
+    border-color: black;   
+    background-color: rgb(197, 248, 245);
+    z-index: 3;
+}
+
+.menuButtons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.difficultySelectContainer {
+    display: inline-block;
+    block-size: fit-content;
+    border-width: 0.1em;
+    border-style: solid;
+    border-color: grey;
+    background-color: rgba(255, 211, 253, 1);
+}
+
+.endVerseText {
+    text-align: center;
+    overflow-y: auto;
+}
+
+.endScoreContainer { /* Container holding the score and time */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#endingTimeContainer { /* Container holding the time, visibilty controlled by JS */
+    display: none;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1em; /* Gives space between the time container and the score container */
+}
+
+.endingScore, .endingTime {
+    margin-left: 0.25em; /* Simulate normal character space */
+}
+
+.playAgainButton {
+    background-color: rgba(80, 210, 120, 1);
+}
+
+/* OVERLAY STYLING */
+#endGameOverlay, #revealAnswerOverlay, #countdownOverlay {
+    display: none; /* Starts the window as none (invisible) and is changed to block (visible) and back to none through JS */
+    position: fixed;
+    min-height: 100vh;
+    min-width: 100vw;
+    margin: 0;
+    top: 0;
+    left: 0;
+    -webkit-backdrop-filter: blur(1rem); /* So the blur backdrop filter works on Safari */
+    backdrop-filter: blur(1rem);
+    z-index: 1;
+}
+
+#revealAnswerOverlay {
+    cursor: pointer;
+}
+
+/* BUTTON AND SELECT STYLING */
+button, select {
+    background-color: rgba(255, 211, 253, 1);
+    border-color: grey;
+    border-width: 0.15rem;
+    border-radius: 0.25rem;
+    font: var(--button-font-size) "Arial", sans-serif;    
+}
+
+button:hover, select:hover {
+    cursor: pointer;
+    filter: brightness(91%); /* Dims color so there is visible color change on hover */
+}
+
+/* BACKGROUND STYLING */
+.background {
+    position: fixed; /* This and two lines below fixes the background to have its upper left corner in the upper left of the screen */
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    min-height: 100%;
+    min-width: 100%;
+    opacity: 70%; /* Makes background more transparent to decrease its emphasis and draw out the foreground */
+    z-index: -1; /* Makes sure that the background image is behind all other elements */
+}
+
+/* MAKES BUBBLES AND BOXES READABLE FOR SMALLER SCREENS */
+@media only screen and (max-height: 530px) and (min-width: 530px), only screen and (min-height: 530px) and (max-width: 530px),
+    only screen and (max-height: 530px) and (max-width: 530px) {
+    .container {
+        grid-template-rows: 5fr 14fr 26fr 5fr;  
+    }
+
+    .dropbox, .incorrect {
+        min-height: 30%;
+    }
+} 

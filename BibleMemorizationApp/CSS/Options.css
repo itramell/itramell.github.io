@@ -1,0 +1,141 @@
+/* Stylesheet for Options.html, the options page */
+
+:root {
+    /* Defining font sizes for responsive design */
+    /* Where I got the clamp() values: 
+            https://utopia.fyi/type/calculator?c=240,16,1.2,1920,22,1.2,10,0,360&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+    --button-font-size-smaller: clamp(1rem, 0.9464rem + 0.3571vw, 1.375rem);
+    --main-font-size: clamp(1.2rem, 1.1357rem + 0.4286vw, 1.65rem);
+    --select-font-size: clamp(1.44rem, 1.3629rem + 0.5143vw, 1.98rem);
+    --start-game-button-font-size: clamp(2.4881rem, 2.3548rem + 0.8887vw, 3.4213rem);
+}
+
+/* PAGE SIZING AND MAIN FONT STYLING*/
+html {
+    height: 100%;
+    font: var(--main-font-size) "Arial", sans-serif;
+}
+
+body {
+    height: calc(100% - 1em);
+    width: calc(100% - 1em);
+}
+
+p {
+    display: none; /* By default, don't show mode and difficulty text descriptions, only those are in <p> tag */
+    text-shadow: 0em 0em 0.5em rgba(255, 75, 253, 1);
+}
+
+/* Styling to change the display to block from none, corresponds to <p> tag, as only one line of text for each description is shown */
+.currentMode {
+    display: block;
+}
+
+.currentDifficulty {
+    display: block;
+}
+
+/* GRID SETUP AND STYLING: For page layout */
+.container {
+    display: grid;
+    grid-template-areas:
+        "homeButton"
+        "modeSelect"
+        "modeDescription"
+        "difficultySelect"
+        "difficultyDescription"
+        "startGameButton";
+    grid-template-rows: 1fr 2fr 4fr 2fr 4fr 2fr;
+    gap: 0.5em;
+    justify-items: center;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+}
+
+/* GRID BACK TO HOME BUTTON AREA: Container holding the back to home button */ 
+.homeButtonContainer {
+    grid-area: homeButton;
+}
+
+/* GRID MODE SELECTION AREA: Container holding the mode drop-down to selct modes */ 
+.modeSelectContainer {
+    grid-area: modeSelect;
+    font: var(--select-font-size) "Arial", sans-serif; /* Gets the proper drop-down label font size */
+}
+
+/* GRID MODE DESCRIPTION AREA: Container holding the text describing the selected mode */ 
+.modeDescriptionContainer {
+    grid-area: modeDescription;
+}
+
+/* GRID DIFFICULTY SELECTION AREA: Container holding the difficulty drop-down to select difficulties */ 
+.difficultySelectContainer { 
+    grid-area: difficultySelect;
+    font: var(--select-font-size) "Arial", sans-serif; /* Gets the proper drop-down label font size */
+}
+
+/* GRID DIFFICULTY DESCRIPTION AREA: Container holding the text describing the selected difficulty */ 
+.difficultyDescriptionContainer {
+    grid-area: difficultyDescription;
+}
+
+/* GRID START GAME BUTTON AREA: Container holding the start game button */ 
+.startGameContainer {
+    grid-area: startGameButton;
+}
+
+/* BUTTON AND SELECT STYLING */
+button, select {
+    background-color: rgba(255, 211, 253, 1);
+    border-color: grey;
+    border-width: 0.15rem;
+    border-radius: 0.25rem;
+    font: var(--select-font-size) "Arial", sans-serif;
+}
+
+button:hover, select:hover {
+    cursor: pointer;
+    filter: brightness(91%); /* Dims color so there is visible color change on hover */
+}
+
+.startGameButton {
+    background-color: rgba(74, 233, 167, 1);
+    font: var(--start-game-button-font-size) "Arial", sans-serif;
+}
+
+/* BACKGROUND STYLING */
+.background {
+    position: fixed; /* This and two lines below fixes the background to have its upper left corner in the upper left of the screen */
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    min-height: 100%;
+    min-width: 100%;
+    filter: opacity(65%); /* Make more transparent to have text more readable and background not be emphasized */
+    z-index: -1; /* Makes sure that the background image is behind all other elements */
+}
+
+/* LAYOUT DIFFERENCES FOR COMPUTER SCREENS AND LARGE TABLETS */
+@media only screen and (min-width: 768px) {
+    .container {
+        display: grid;
+        grid-template-areas:
+            "homeButton homeButton"
+            "modeSelect modeDescription"
+            "difficultySelect  difficultyDescription"
+            "startGameButton startGameButton";
+        grid-template-columns: 2fr 3fr;
+        grid-template-rows: 1fr 4fr 4fr 2fr;
+    }
+
+    .homeButtonContainer {
+        justify-self: left;
+        align-self: start;       
+    }
+
+    .homeButton {
+        font: var(--button-font-size-smaller) "Arial", sans-serif;
+    }
+}
+
