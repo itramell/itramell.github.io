@@ -27,7 +27,7 @@ For the SRS and BP documents, I had the task of creating all the use cases, data
 - [Data Flow Diagrams and Process Specifications](https://github.com/itramell/itramell.github.io/blob/fc6586a61b12ee702e366b353dea26454cbf0bfb/SystemsAnalysisWork/DataFlowDiagrams.pdf)
 - [Systems Analysis Part of Repository](https://github.com/itramell/itramell.github.io/tree/fc6586a61b12ee702e366b353dea26454cbf0bfb/SystemsAnalysisWork)
 
-Note: The SRS and BP are Word Documents, which will need to be downloaded to be viewed. 
+Note: The SRS and BP are Word Documents, which will need to be downloaded to be viewed. They can be found in the SystemsAnalysisWork folder in the repository, which is the last link in the list above.
 
 ## Kattis Solutions
 
