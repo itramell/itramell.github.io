@@ -59,4 +59,4 @@ For my Algorithm Analysis class, COS 320, I have been working on solving problem
   - [Solution](https://github.com/itramell/itramell.github.io/blob/a04e562adb0cb7057862f75fbd874aecd723a84b/KattisCodeSolutions/ticTacToe/ticTacToe.py)
   - [Problem Statement](https://open.kattis.com/problems/tictactoe2)
 
-Here is a link to the full [folder of solutions](https://github.com/itramell/itramell.github.io/tree/fc6586a61b12ee702e366b353dea26454cbf0bfb/KattisCodeSolutions) in the repository.
+Here is a link to the full [folder of solutions](https://github.com/itramell/itramell.github.io/tree/f140f10b985123fec9530bf15638e9820c7c4f56/KattisCodeSolutions) in the repository.
