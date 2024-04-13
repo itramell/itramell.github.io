@@ -43,5 +43,20 @@ For my Algorithm Analysis class, COS 320, I have been working on solving problem
 - Inflation *
   - [Solution](https://github.com/itramell/itramell.github.io/blob/fc6586a61b12ee702e366b353dea26454cbf0bfb/KattisCodeSolutions/inflation/inflation.py)
   - [Problem Statement](https://open.kattis.com/problems/inflation2)
+- Quickscope
+  - [Solution](https://github.com/itramell/itramell.github.io/blob/a04e562adb0cb7057862f75fbd874aecd723a84b/KattisCodeSolutions/quickscope/quickscope.py)
+  - [Problem Statement](https://open.kattis.com/problems/quickscope)
+- Basic Programming 1
+  - [Solution](https://github.com/itramell/itramell.github.io/blob/a04e562adb0cb7057862f75fbd874aecd723a84b/KattisCodeSolutions/basicProgramming1/basicProgramming1.py)
+  - [Problem Statement](https://open.kattis.com/problems/basicprogramming1)
+- Basic Programming 2
+  - [Solution](https://github.com/itramell/itramell.github.io/blob/a04e562adb0cb7057862f75fbd874aecd723a84b/KattisCodeSolutions/basicProgramming2/basicProgramming2.py)
+  - [Problem Statement](https://open.kattis.com/problems/basicprogramming2)
+- Talnalás
+  - [Solution](https://github.com/itramell/itramell.github.io/blob/a04e562adb0cb7057862f75fbd874aecd723a84b/KattisCodeSolutions/talnalas/talnalas.py)
+  - [Problem Statement](https://open.kattis.com/problems/talnalas)
+- Tic Tac Toe
+  - [Solution](https://github.com/itramell/itramell.github.io/blob/a04e562adb0cb7057862f75fbd874aecd723a84b/KattisCodeSolutions/ticTacToe/ticTacToe.py)
+  - [Problem Statement](https://open.kattis.com/problems/tictactoe2)
 
 Here is a link to the full [folder of solutions](https://github.com/itramell/itramell.github.io/tree/fc6586a61b12ee702e366b353dea26454cbf0bfb/KattisCodeSolutions) in the repository.
