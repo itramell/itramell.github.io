@@ -38,7 +38,7 @@ In Spring of 2023, I, a programmer, worked with Joey Gorski, a programmer, Brick
 - [Stide&Steek itch.io page](https://cuppuhjoe.itch.io/stidesteek)
   - A note on controls: One player uses wsad and the other uses arrow keys. For the cop to catch the robber, the cop must touch the robber player character.
 - [Stide&Steek page on the itch.io Taylor University's CSE GameJam Site](https://itch.io/jam/tu-cse-gamejam-s2023/rate/2042720)
-- [Taylor University's CSE itch.io GameJam 2023 Site](https://itch.io/jam/tu-cse-gamejam-s2023)
+- [Taylor University's CSE itch.io GameJam Spring 2023 Site](https://itch.io/jam/tu-cse-gamejam-s2023)
 - [Taylor University's CSE GameJam Site](https://gamejam.cse.taylor.edu/)
 
 ## Kattis Solutions
