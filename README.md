@@ -5,7 +5,8 @@ Hello! My name is Iona Tramelli, and located here is some of the work that I hav
 Contents:
 1. [Bible Memorization Application](#bible-memorization-application)
 2. [Systems Analysis Documentation](#systems-analysis-documentation)
-3. [Kattis Solutions](#kattis-solutions)
+3. [GameJam Game](#gamejam-game)
+4. [Kattis Solutions](#kattis-solutions)
 
 ## Bible Memorization Application
 
@@ -29,6 +30,16 @@ For the SRS and BP documents, I had the task of creating all the use cases, data
 - [Systems Analysis Part of Repository](https://github.com/itramell/itramell.github.io/tree/fc6586a61b12ee702e366b353dea26454cbf0bfb/SystemsAnalysisWork)
 
 Note: The SRS and BP are Word Documents, which will need to be downloaded to be viewed. They can be found in the SystemsAnalysisWork folder in the repository, which is the last link in the list above.
+
+## GameJam Game
+
+In Spring of 2023, I, a programmer, worked with Joey Gorski, a programmer, Brickson Cain, an artist, and Ana Ruth Geist, an artist, to create a playable game during Taylor University's CSE department's GameJam. A GameJam is essentially a 3 day competition, where on the first day we are introduced to the theme and get to explore with code. Starting in the evening on day 2, we, from scratch, create a game which then gets presented and judged on the evening of the 3rd and final day, which allocates 24 hours to the actual creation of the game. The theme of the GameJam in the Spring of 2023 was "Color is Everything", and my team and I created a game called Stide&Steek. This game incorporates both cops and robbers and hide and seek, where a cop is looking for the robber in darkness, but as the cop moves he drops colored lights behind him so he can see more. We used the theme "Color is Everything" as the cop cannot catch the robber without light, which in this case is color. Hence, color is everything. The playable game located on itch.io and more information about GameJam itself is linked below:
+
+- [Stide&Steek itch.io page](https://cuppuhjoe.itch.io/stidesteek)
+  - A note on controls: One player uses wsad and the other uses arrow keys. For the cop to catch the robber, the cop must touch the robber player character.
+- [Stide&Steek page on the itch.io Taylor University's CSE GameJam Site](https://itch.io/jam/tu-cse-gamejam-s2023/rate/2042720)
+- [Taylor University's CSE itch.io GameJam 2023 Site](https://itch.io/jam/tu-cse-gamejam-s2023)
+- [Taylor University's CSE GameJam Site](https://gamejam.cse.taylor.edu/)
 
 ## Kattis Solutions
 
