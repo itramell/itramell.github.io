@@ -69,5 +69,8 @@ For my Algorithm Analysis class, COS 320, I have been working on solving problem
 - Tic Tac Toe
   - [Solution](https://github.com/itramell/itramell.github.io/blob/a04e562adb0cb7057862f75fbd874aecd723a84b/KattisCodeSolutions/ticTacToe/ticTacToe.py)
   - [Problem Statement](https://open.kattis.com/problems/tictactoe2)
+- Fridge *
+  - [Solution](https://github.com/itramell/itramell.github.io/blob/7308c963712de27f63b4d4ee769d933629e080ad/KattisCodeSolutions/fridge/fridge.py)
+  - [Problem Statement](https://open.kattis.com/problems/fridge)
 
 Here is a link to the full [folder of solutions](https://github.com/itramell/itramell.github.io/tree/f140f10b985123fec9530bf15638e9820c7c4f56/KattisCodeSolutions) in the repository.
