@@ -4,7 +4,7 @@ Hello! My name is Iona Tramelli, and located here is some of the work that I hav
 
 Contents:
 1. [Systems Analysis Documentation](#systems-analysis-documentation)
-2. [Bible Memorization Application](#bible-memorization-application)
+2. [Memorization Application](#memorization-application)
 3. [GameJam Game](#gamejam-game)
 4. [Kattis Solutions](#kattis-solutions)
 
