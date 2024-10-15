@@ -3,21 +3,10 @@
 Hello! My name is Iona Tramelli, and located here is some of the work that I have done. All source code is located within the same [repository](https://github.com/itramell/itramell.github.io) that this page is generated from.
 
 Contents:
-1. [Bible Memorization Application](#bible-memorization-application)
-2. [Systems Analysis Documentation](#systems-analysis-documentation)
+1. [Systems Analysis Documentation](#systems-analysis-documentation)
+2. [Bible Memorization Application](#bible-memorization-application)
 3. [GameJam Game](#gamejam-game)
 4. [Kattis Solutions](#kattis-solutions)
-
-## Bible Memorization Application
-
-In January 2024 my work partner Jaylyn Henegar and I created a Bible memorization application for our J-Term class COS 492: Senior Project. Our main goal for the application was to make a fun game for kids to help with memorizing Bible verses, and over the course of 4 weeks we created and documented our application. The languages we used are HTML, CSS, and JavaScript, and we used GitLab and git in the command line to work together. This application was created to be used for a larger project which would have a backend so that a user may select their Bible verse to memorize. For now, the Bible verse is hard coded to be John 3:16.
-
-The parts that I worked on were the CSS, the majority of the HTML, the documentation on the design of the application, and the linking of all the pieces of the documentation, as it is in three parts. The main part of the documentation is in a README file, which links to the design docs and technical docs. The design docs mainly document the application layout and the CSS and HTML, while the technical docs document the JavaScript. 
-
-- [Application README](https://github.com/itramell/itramell.github.io/blob/e276f5a8eb8bb5699380099a7185c1bf251b0963/BibleMemorizationApp/README.md)
-- [Design Doc](https://github.com/itramell/itramell.github.io/blob/e276f5a8eb8bb5699380099a7185c1bf251b0963/BibleMemorizationApp/TechnicalDocuments/DesignDoc.md)
-- [Playable Application](https://itramell.github.io/BibleMemorizationApp/HTML/Homepage.html)
-- [Application Code Part of Repository](https://github.com/itramell/itramell.github.io/tree/1430b00d24656fb159bf1a5d3f6beabd73f4ca03/BibleMemorizationApp)
 
 ## Systems Analysis Documentation
 
@@ -31,12 +20,29 @@ For the SRS and BP documents, I had the task of creating all the use cases, data
 
 Note: The SRS and BP are Word Documents, which will need to be downloaded to be viewed. They can be found in the SystemsAnalysisWork folder in the repository, which is the last link in the list above.
 
+## Memorization Application
+
+In January 2024 my work partner Jaylyn Henegar and I created a Bible memorization application for our J-Term class COS 492: Senior Project. Our main goal for the application was to make a fun game for kids to help with memorizing Bible verses, and over the course of 4 weeks we created and documented our application. The languages we used are HTML, CSS, and JavaScript, and we used GitLab and git in the command line to work together. This application was created to be used for a larger project which would have a backend so that a user may select their Bible verse to memorize. For now, the Bible verse is hard coded to be John 3:16.
+
+The parts that I worked on were the CSS, the majority of the HTML, the documentation on the design of the application, and the linking of all the pieces of the documentation, as it is in three parts. The main part of the documentation is in a README file, which links to the design docs and technical docs. The design docs mainly document the application layout and the CSS and HTML, while the technical docs document the JavaScript. 
+
+- [Application README](https://github.com/itramell/itramell.github.io/blob/e276f5a8eb8bb5699380099a7185c1bf251b0963/BibleMemorizationApp/README.md)
+- [Design Doc](https://github.com/itramell/itramell.github.io/blob/e276f5a8eb8bb5699380099a7185c1bf251b0963/BibleMemorizationApp/TechnicalDocuments/DesignDoc.md)
+- [Playable Application](https://itramell.github.io/BibleMemorizationApp/HTML/Homepage.html)
+- [Application Code Part of Repository](https://github.com/itramell/itramell.github.io/tree/1430b00d24656fb159bf1a5d3f6beabd73f4ca03/BibleMemorizationApp)
+
 ## GameJam Game
 
-In Spring of 2023, I, a programmer, worked with Joey Gorski, a programmer, Brickson Cain, an artist, and Ana Ruth Geist, an artist, to create a playable game during Taylor University's CSE department's GameJam. A GameJam is essentially a 3 day competition, where on the first day we are introduced to the theme and get to explore with code. Starting in the evening on day 2, we, from scratch, create a game which then gets presented and judged on the evening of the 3rd and final day, which allocates 24 hours to the actual creation of the game. The theme of the GameJam in the Spring of 2023 was "Color is Everything", and my team and I created a game called Stide&Steek. This game incorporates both cops and robbers and hide and seek, where a cop is looking for the robber in darkness, but as the cop moves he drops colored lights behind him so he can see more. We used the theme "Color is Everything" as the cop cannot catch the robber without light, which in this case is color. Hence, color is everything. The playable game located on itch.io and more information about GameJam itself is linked below:
+In Spring of 2023, I, a programmer, worked with Joey Gorski, a programmer, Brickson Cain, an artist, and Ana Ruth Geist, an artist, to create a playable game during Taylor University's CSE department's GameJam. A GameJam is essentially a 3 day competition, where on the first day we are introduced to the theme and get to explore with code. Starting in the evening on day 2, we, from scratch, create a game which then gets presented and judged on the evening of the 3rd and final day, which allocates 24 hours to the actual creation of the game. The theme of the GameJam in the Spring of 2023 was "Color is Everything", and my team and I created a game called Stide&Steek. This game incorporates both cops and robbers and hide and seek, where a cop is looking for the robber in darkness, but as the cop moves he drops colored lights behind him so he can see more. The robber also drops small lights that fade quickly to be a short trail for the cop to follow if they see it. We used the theme "Color is Everything" as the cop cannot catch the robber without light, which in this case is color. Hence, color is everything. The playable game located on itch.io and more information about GameJam itself is linked below:
 
 - [Stide&Steek itch.io page](https://cuppuhjoe.itch.io/stidesteek)
-  - A note on controls: One player uses wsad and the other uses arrow keys. For the cop to catch the robber, the cop must touch the robber player character.
+  - Game Engine: Godot
+  - Intended Operating System: Windows. There is no guarentee that this game will work on other operating systems, as the executable is a .exe.
+  - How to Play: Download and extract the zip file. Open the folder holding the game and double click on "Stide&Steek_Final.exe" to open the game. Once the game is loaded, press "space" to start the game. The cop is controlled by WASD and the robber is controlled through the arrow keys. The game will end either when the cop catches the robber, or if the robber escapes the cop for 1 minute and 30 seconds. On the end screen, you can return to the main screen through the top most button, or replay the game through the middle button. To exit the game, press the "X" on the top right on the bar, or press "escape".
+  - Known bugs:
+    - The game may not size properly based on screen size. It is still playable, at least with a screen size of 1920x1080, but the home screen and end screens will not be centered, so the end screen buttons may be hard to press or see.
+    - The third button on the end game screen does not work.
+    - The cop and robber spawn in the same location every time.
 - [Stide&Steek page on the itch.io Taylor University's CSE GameJam Site](https://itch.io/jam/tu-cse-gamejam-s2023/rate/2042720)
 - [Taylor University's CSE itch.io GameJam Spring 2023 Site](https://itch.io/jam/tu-cse-gamejam-s2023)
 - [Taylor University's CSE GameJam Site](https://gamejam.cse.taylor.edu/)
